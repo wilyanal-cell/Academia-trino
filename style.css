@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f4f4f4;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu button {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.menu button:hover {
+  background: #0056b3;
+}
+
+.exercise {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.exercise img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.exercise button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+.exercise button:hover {
+  background: #1e7e34;
+}
+
+.progress {
+  margin-top: 20px;
+  height: 10px;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #28a745;
+  width: 0%;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
