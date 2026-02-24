@@ -7,15 +7,32 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Treino ABC</h1>
-  <div class="menu">
-    <button onclick="startWorkout('A')">Iniciar Treino A</button>
-    <button onclick="startWorkout('B')">Iniciar Treino B</button>
-    <button onclick="startWorkout('C')">Iniciar Treino C</button>
-  </div>
+  <header>
+    <h1>Treino ABC</h1>
+    <nav>
+      <button onclick="showMenu()">Treinos</button>
+      <button onclick="showConfig()">Configuração</button>
+    </nav>
+  </header>
 
-  <div id="workout"></div>
-  <div class="progress"><div id="progress-bar" class="progress-bar"></div></div>
+  <main>
+    <div id="menu" class="section">
+      <button onclick="startWorkout('A')">Iniciar Treino A</button>
+      <button onclick="startWorkout('B')">Iniciar Treino B</button>
+      <button onclick="startWorkout('C')">Iniciar Treino C</button>
+    </div>
+
+    <div id="workout" class="section"></div>
+
+    <div id="config" class="section hidden">
+      <h2>Configurar Treinos</h2>
+      <p>Digite os exercícios, séries/reps e links de imagens:</p>
+      <textarea id="configData" rows="12" style="width:100%;"></textarea>
+      <button onclick="saveConfig()">Salvar Configuração</button>
+    </div>
+
+    <div class="progress"><div id="progress-bar" class="progress-bar"></div></div>
+  </main>
 
   <script src="script.js"></script>
 </body>

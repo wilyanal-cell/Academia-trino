@@ -1,45 +1,49 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  padding: 20px;
-  background: #f4f4f4;
+  padding: 0;
+  background: #f9f9f9;
   color: #333;
 }
 
-h1 {
+header {
+  background: #007bff;
+  color: white;
+  padding: 15px;
   text-align: center;
-  margin-bottom: 20px;
 }
 
-.menu button {
-  width: 100%;
-  padding: 15px;
-  margin: 10px 0;
-  font-size: 18px;
+nav {
+  margin-top: 10px;
+}
+
+nav button {
+  margin: 5px;
+  padding: 10px 15px;
   border: none;
-  border-radius: 8px;
-  background: #007bff;
+  border-radius: 6px;
+  background: #0056b3;
   color: white;
   cursor: pointer;
 }
 
-.menu button:hover {
-  background: #0056b3;
+nav button:hover {
+  background: #003f7f;
 }
 
-.exercise {
+.section {
+  padding: 20px;
   text-align: center;
-  margin-top: 20px;
 }
 
-.exercise img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin: 15px 0;
+.hidden {
+  display: none;
 }
 
-.exercise button {
-  padding: 12px 20px;
+button {
+  width: 90%;
+  padding: 15px;
+  margin: 10px auto;
   font-size: 16px;
   border: none;
   border-radius: 8px;
@@ -48,12 +52,18 @@ h1 {
   cursor: pointer;
 }
 
-.exercise button:hover {
+button:hover {
   background: #1e7e34;
 }
 
+.exercise img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
 .progress {
-  margin-top: 20px;
+  margin: 20px;
   height: 10px;
   background: #ddd;
   border-radius: 5px;

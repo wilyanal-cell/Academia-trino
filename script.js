@@ -1,13 +1,50 @@
 let workouts = {};
 let current = 0, selected = [];
 
-// Carregar treinos do arquivo JSON
-fetch("workouts.json")
-  .then(response => response.json())
-  .then(data => {
-    workouts = data;
-  })
-  .catch(error => console.error("Erro ao carregar treinos:", error));
+// Carregar configuração salva no navegador
+window.onload = () => {
+  const saved = localStorage.getItem("workouts");
+  if (saved) {
+    workouts = JSON.parse(saved);
+  } else {
+    // Treino padrão inicial
+    workouts = {
+      A: [
+        { name: "Supino Reto", img: "https://via.placeholder.com/300x200?text=Supino+Reto", reps: "4x8-12" },
+        { name: "Supino Inclinado", img: "https://via.placeholder.com/300x200?text=Supino+Inclinado", reps: "4x8-10" }
+      ],
+      B: [
+        { name: "Barra Fixa", img: "https://via.placeholder.com/300x200?text=Barra+Fixa", reps: "4x8-12" }
+      ],
+      C: [
+        { name: "Agachamento", img: "https://via.placeholder.com/300x200?text=Agachamento", reps: "4x8-10" }
+      ]
+    };
+  }
+  document.getElementById("configData").value = JSON.stringify(workouts, null, 2);
+};
+
+function showMenu() {
+  document.getElementById("menu").classList.remove("hidden");
+  document.getElementById("config").classList.add("hidden");
+  document.getElementById("workout").innerHTML = "";
+}
+
+function showConfig() {
+  document.getElementById("menu").classList.add("hidden");
+  document.getElementById("config").classList.remove("hidden");
+  document.getElementById("workout").innerHTML = "";
+}
+
+function saveConfig() {
+  try {
+    workouts = JSON.parse(document.getElementById("configData").value);
+    localStorage.setItem("workouts", JSON.stringify(workouts));
+    alert("Configuração salva com sucesso!");
+  } catch (e) {
+    alert("Erro ao salvar configuração. Verifique o formato JSON.");
+  }
+}
 
 function startWorkout(type) {
   selected = workouts[type];
