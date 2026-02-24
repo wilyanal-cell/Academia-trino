@@ -1,0 +1,15 @@
+{
+  "A": [
+    { "name": "Supino Reto", "img": "https://exemplo.com/supino.jpg", "reps": "4x8-12" },
+    { "name": "Supino Inclinado", "img": "https://exemplo.com/supino_inclinado.jpg", "reps": "4x8-10" },
+    { "name": "Crucifixo Inclinado", "img": "https://exemplo.com/crucifixo.jpg", "reps": "3x12-15" }
+  ],
+  "B": [
+    { "name": "Barra Fixa", "img": "https://exemplo.com/barra_fixa.jpg", "reps": "4x8-12" },
+    { "name": "Remada Curvada", "img": "https://exemplo.com/remada.jpg", "reps": "3x8-10" }
+  ],
+  "C": [
+    { "name": "Agachamento Livre", "img": "https://exemplo.com/agachamento.jpg", "reps": "4x8-10" },
+    { "name": "Prancha Abdominal", "img": "https://exemplo.com/prancha.jpg", "reps": "3x30-60s" }
+  ]
+}

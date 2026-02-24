@@ -1,25 +1,13 @@
-const workouts = {
-  A: [
-    { name: "Supino Reto", img: "supino.jpg", reps: "4x8-12" },
-    { name: "Supino Inclinado", img: "supino_inclinado.jpg", reps: "4x8-10" },
-    { name: "Crucifixo Inclinado", img: "crucifixo.jpg", reps: "3x12-15" },
-    { name: "Flexão Declinada", img: "flexao.jpg", reps: "3x15-20" }
-  ],
-  B: [
-    { name: "Barra Fixa", img: "barra_fixa.jpg", reps: "4x8-12" },
-    { name: "Remada Curvada", img: "remada.jpg", reps: "3x8-10" },
-    { name: "Rosca Direta", img: "rosca.jpg", reps: "3x8-10" },
-    { name: "Supino Declinado", img: "supino_declinado.jpg", reps: "3x12-15" }
-  ],
-  C: [
-    { name: "Agachamento Livre", img: "agachamento.jpg", reps: "4x8-10" },
-    { name: "Stiff", img: "stiff.jpg", reps: "3x8-10" },
-    { name: "Prancha Abdominal", img: "prancha.jpg", reps: "3x30-60s" },
-    { name: "Crucifixo Reto", img: "crucifixo_reto.jpg", reps: "3x12-15" }
-  ]
-};
-
+let workouts = {};
 let current = 0, selected = [];
+
+// Carregar treinos do arquivo JSON
+fetch("workouts.json")
+  .then(response => response.json())
+  .then(data => {
+    workouts = data;
+  })
+  .catch(error => console.error("Erro ao carregar treinos:", error));
 
 function startWorkout(type) {
   selected = workouts[type];
